@@ -8,6 +8,7 @@ LFLAGS = ${GSLFLAGS}
 _EXE = watts_strogatz.exe
 EXE = $(_EXE)
 
+# Libraries
 INC = /usr/local/include
 LIB = /usr/local/lib
 
