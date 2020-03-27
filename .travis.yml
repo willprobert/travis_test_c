@@ -12,5 +12,3 @@ matrix:
 	  - gcc
 	before_install:
 		- sudo apt-get install libgsl-dev
-git:
-  depth: 1
