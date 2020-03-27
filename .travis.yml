@@ -1,8 +1,18 @@
-language: python
-python: 3.8
-install:
-  - pip install -r tests/requirements.txt
-script: pytest
+matrix:
+  include:
+  - language: c
+      script: 
+        - cd src
+        - make clean
+        - make all
+      compiler: gcc
+      before_install: sudo apt-get install libgsl-dev
+  - language: python
+    python: 3.8
+    install:
+      - pip install -r tests/requirements.txt
+    script: pytest
+    
 notifications:
   email:
     - willprobert@gmail.com
