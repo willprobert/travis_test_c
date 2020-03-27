@@ -1,0 +1,16 @@
+matrix:
+  include:
+  - language: python
+	python: "3.8"
+	install:
+	  - pip install -r tests/requirements.txt
+	script: pytest
+  - language: c
+	script: 
+	  - cd src; make clean; make all
+	compiler:
+	  - gcc
+	before_install:
+		- sudo apt-get install libgsl-dev
+git:
+  depth: 1
