@@ -4,6 +4,7 @@ matrix:
       python: 3.8
       install: pip install -r tests/requirements.txt
       script: pytest
+      
   - language: c
 	script: 
 	  - cd src
