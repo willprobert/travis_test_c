@@ -44,7 +44,9 @@ class TestClass(object):
         compile_command = "make clean; make all"
         completed_compilation = subprocess.run([compile_command], 
             shell = True, cwd = SRC_DIR_TEST, capture_output = True)
-    
+        print(compile_command)
+        print(completed_compilation)
+        
     @classmethod
     def teardown_class(self):
         """
@@ -72,5 +74,5 @@ class TestClass(object):
         # Call the model using baseline parameters, pipe output to file, read output file
         file_output = open(TEST_OUTPUT_FILE, "w")
         completed_run = subprocess.run([command], stdout = file_output, shell = True)
-        
+        print(completed_run)
         np.testing.assert_equal(completed_run.returncode, 0)
