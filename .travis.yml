@@ -11,8 +11,9 @@ matrix:
     python: 3.8
     install:
       - pip install -r tests/requirements.txt
-    script: pytest
-    
+    script:
+      - python -m pytest
+
 notifications:
   email:
     - willprobert@gmail.com
