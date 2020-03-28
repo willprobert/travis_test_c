@@ -1,11 +1,11 @@
 matrix:
   include:
   - language: c
+      compiler: gcc
       script: 
         - cd src
         - make clean
         - make all
-      compiler: gcc
       before_install: sudo apt-get install libgsl-dev
   - language: python
     python: 3.8
